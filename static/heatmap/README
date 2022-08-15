@@ -1,0 +1,53 @@
+TopoJSON countries:
+https://github.com/samateja/D3topoJson/
+
+TopoJSON US:
+https://github.com/topojson/us-atlas
+
+
+Extract regions from TopoJSON :
+jq -r ' first(.objects) | .[].geometries[].properties.name'
+
+for i in *.json ; do echo "$i" ; c=$(basename "$i" .json) ; cat "$i" | jq -r " first(.objects) | .[].geometries[].properties.name" | tawk 'BEGIN { print "name","covid_rate","tx2019","tx2020" } 1 { print $1,int(rand()*1000), int(rand()*10), int(rand()*5) }' > $c.data;  done
+
+
+Use geojson.io to remove entire regions from TopoJSON files.
+
+Use https://mapshaper.org/ to edit TopoJSON file.
+use "simplify" to reduce file size.
+use "console" and type "mapshaper explode" to break MultiPolygons into Polygons (and then delete thm).
+see: https://help.flourish.studio/article/190-how-to-split-out-regions-with-mapshaper
+
+
+ 1729  wget https://github.com/stevengj/nlopt/archive/v2.6.2.tar.gz
+ 1996  wget https://d3js.org/us-10m.v1.json
+ 2029  wget https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json
+ 2046  wget https://github.com/samateja/D3topoJson/blob/master/mozambique.json
+ 2051  wgethttps://raw.githubusercontent.com/samateja/D3topoJson/master/mozambique.json
+ 2052  wget https://raw.githubusercontent.com/samateja/D3topoJson/master/mozambique.json
+ 2062  wget https://raw.githubusercontent.com/samateja/D3topoJson/master/france.json
+ 2101  history | grep wget
+ 2103  wget https://raw.githubusercontent.com/samateja/D3topoJson/master/usa.json
+ 2111  wget https://raw.githubusercontent.com/samateja/D3topoJson/master/usa.json
+ 2124  wget https://raw.githubusercontent.com/deldersveld/topojson/master/countries/france/fr-departments.json
+ 2165  wget https://github.com/samateja/D3topoJson/raw/master/argentina.json
+ 2166  wget https://github.com/samateja/D3topoJson/raw/master/austria.json
+ 2168  wget https://github.com/samateja/D3topoJson/raw/master/belgium.json
+ 2169  wget -q https://github.com/samateja/D3topoJson/raw/master/brazil.json
+ 2170  wget -q https://github.com/samateja/D3topoJson/raw/master/canada.json
+ 2171  wget -q https://github.com/samateja/D3topoJson/raw/master/chile.json
+ 2172  wget -q https://github.com/samateja/D3topoJson/raw/master/croatia.json
+ 2173  wget -q https://github.com/samateja/D3topoJson/raw/master/finland.json
+ 2174  wget -q https://github.com/samateja/D3topoJson/raw/master/germany.json
+ 2175  wget -q https://github.com/samateja/D3topoJson/raw/master/greece.json
+ 2176  wget -q https://github.com/samateja/D3topoJson/raw/master/hungary.json
+ 2177  wget -q https://github.com/samateja/D3topoJson/raw/master/italy.json
+ 2178  wget -q https://github.com/samateja/D3topoJson/raw/master/netherlands.json
+ 2179  wget -q https://github.com/samateja/D3topoJson/raw/master/norway.json
+ 2180  wget -q https://github.com/samateja/D3topoJson/raw/master/portugal.json
+ 2181  wget -q https://github.com/samateja/D3topoJson/raw/master/slovania.json
+ 2182  wget -q https://github.com/samateja/D3topoJson/raw/master/spain.json
+ 2184  wget -q https://github.com/samateja/D3topoJson/raw/master/switzerland.json
+ 2185  wget -q https://github.com/samateja/D3topoJson/raw/master/uk.json
+ 2187  wget -q https://github.com/samateja/D3topoJson/raw/master/unitedKingdom.json
+ 2227  history | grep wget >> README

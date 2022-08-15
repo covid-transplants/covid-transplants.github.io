@@ -1,0 +1,8 @@
+# testing for france
+mv france.json france.json.old
+mv france.tsv france.tsv.old
+
+awk -v OFS='\t' '$10=="FRANCE"' ~/covid-dashboard-data/WORLDWIDE_DATABASE_TX_2019_2020.tsv |\
+
+
+

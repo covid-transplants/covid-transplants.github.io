@@ -1,0 +1,233 @@
+name	covid_rate	tx2019	tx2020
+Derry	924	5	1
+Strabane	578	7	3
+Fermanagh	436	3	3
+Dungannon	100	7	4
+Armagh	761	4	2
+Newry and Mourne	945	8	3
+Flintshire	157	1	4
+Cheshire West and Chester	868	4	3
+Wrexham	399	6	3
+Shropshire	300	5	4
+Powys	156	7	0
+Herefordshire	548	9	4
+Monmouthshire	422	9	3
+Gloucestershire	173	5	4
+Scottish Borders	205	0	4
+Northumberland	726	7	0
+Cumbria	748	4	2
+Dumfries and Galloway	781	3	0
+Limavady	884	9	3
+Coleraine	160	4	4
+Moyle	990	4	2
+Larne	692	1	1
+Carrickfergus	246	5	2
+Newtownabbey	276	5	2
+Belfast	639	8	0
+North Down	32	0	2
+Ards	371	1	2
+Down	380	5	0
+Clackmannanshire	609	3	3
+Stirling	419	1	4
+Falkirk	211	1	3
+West Lothian	722	0	4
+Edinburgh	870	4	1
+Midlothian	635	4	4
+East Lothian	10	6	0
+North Tyneside	211	2	2
+South Tyneside	40	6	4
+Sunderland	743	9	2
+Durham	265	0	2
+Hartlepool	786	1	0
+Redcar and Cleveland	129	5	0
+North Yorkshire	736	9	3
+East Riding of Yorkshire	339	4	1
+Kingston upon Hull	449	0	4
+North Lincolnshire	96	8	1
+North East Lincolnshire	817	2	1
+Lincolnshire	370	6	2
+Norfolk	702	9	3
+Suffolk	968	5	4
+Essex	692	8	0
+Southend-on-Sea	884	7	4
+Thurrock	857	1	2
+Kent	939	7	1
+Medway	333	8	2
+East Sussex	903	4	2
+Brighton and Hove	332	1	4
+West Sussex	370	0	4
+Hampshire	747	1	3
+Portsmouth	849	1	3
+Southampton	918	7	2
+Dorset	303	5	3
+Bournemouth	377	4	1
+Poole	894	7	2
+Devon	727	5	0
+Torbay	151	1	0
+Plymouth	337	8	0
+Cornwall	635	1	4
+Somerset	494	6	0
+North Somerset	903	5	4
+Bristol	852	6	4
+South Gloucestershire	354	6	2
+Newport	185	0	2
+Cardiff	226	6	0
+Vale of Glamorgan	213	6	1
+Bridgend	704	5	4
+Neath Port Talbot	704	6	0
+Swansea	936	5	4
+Carmarthenshire	179	4	3
+Pembrokeshire	222	2	3
+Ceredigion	832	2	1
+Gwynedd	373	1	0
+Conwy	280	1	1
+Denbighshire	330	2	3
+Halton	944	3	2
+Halton	860	1	4
+Knowsley	518	9	2
+Liverpool	59	8	0
+Sefton	611	7	3
+Lancashire	860	7	3
+Blackpool	585	7	2
+South Ayrshire	309	0	3
+North Ayshire	312	3	1
+Inverclyde	894	2	3
+Renfrewshire	398	4	1
+West Dunbartonshire	555	3	3
+Argyll and Bute	662	0	4
+Highland	209	1	1
+Moray	870	6	4
+Aberdeenshire	614	1	2
+Aberdeen	487	4	4
+Angus	843	7	2
+Dundee	634	6	0
+Perthshire and Kinross	629	3	4
+Fife	237	8	2
+Isle of Wight	961	7	3
+Anglesey	485	0	3
+Eilean Siar	299	4	4
+Orkney	246	7	1
+Shetland Islands	767	7	1
+Isles of Scilly	77	1	4
+Caerphilly	539	6	1
+Rhondda, Cynon, Taff	641	6	3
+Blaenau Gwent	365	2	3
+Torfaen	118	9	3
+Merthyr Tydfil	937	0	0
+North Lanarkshire	812	1	1
+East Dunbartonshire	61	0	0
+Glasgow	731	3	0
+East Renfrewshire	901	7	4
+East Ayrshire	258	4	4
+South Lanarkshire	564	6	0
+Magherafelt	370	9	0
+Omagh	291	4	2
+Mid Ulster	392	7	3
+Craigavon	872	1	1
+Banbridge	21	5	0
+Antrim	610	2	1
+Lisburn	487	7	0
+Ballymoney	492	9	1
+Ballymena	799	2	0
+Castlereagh	791	0	0
+Wandsworth	552	0	2
+Merton	243	1	0
+Westminster	411	5	4
+Kensington and Chelsea	419	3	3
+Hounslow	817	7	1
+Ealing	537	9	0
+Hammersmith and Fulham	55	4	2
+Stockton-on-Tees	939	0	1
+Darlington	815	0	3
+Middlesbrough	153	6	3
+Richmond upon Thames	623	2	3
+City	761	9	0
+Tower Hamlets	745	7	4
+Gateshead	518	2	3
+Newcastle upon Tyne	717	6	0
+York	570	3	3
+Merseyside	949	6	3
+Enfield	20	6	3
+Hertfordshire	31	8	4
+Barnet	925	7	3
+Waltham Forest	237	6	3
+Redbridge	625	1	2
+Havering	907	1	0
+Cambridgeshire	367	1	0
+Bexley	808	9	2
+Sutton	343	1	2
+Milton Keynes	854	0	0
+Buckinghamshire	498	9	3
+Hillingdon	800	7	2
+Brent	829	9	2
+Luton	340	8	4
+Harrow	135	0	2
+Central Bedfordshire	149	7	3
+Bedford	247	4	3
+Rutland	813	4	4
+Nottinghamshire	846	4	4
+Northamptonshire	269	0	0
+Camden	483	3	2
+Islington	844	9	1
+Peterborough	798	8	0
+Lambeth	678	6	3
+Southwark	929	3	1
+Doncaster	488	2	3
+Croydon	26	3	3
+Lewisham	439	0	3
+Haringey	99	5	0
+Kingston upon Thames	215	4	0
+Newham	866	8	2
+Greenwich	388	0	3
+Hackney	42	9	1
+Barking and Dagenham	688	5	4
+Leicestershire	936	6	1
+Cheshire East	110	1	0
+Derbyshire	404	2	4
+Rotherham	520	3	2
+Sheffield	442	2	2
+Stoke-on-Trent	514	4	1
+Telford and Wrekin	412	5	0
+Staffordshire	161	6	2
+Bromley	920	9	0
+Worcestershire	142	6	2
+Warwickshire	433	9	3
+Oxfordshire	101	5	3
+Wigan	581	9	4
+Stockport	356	4	4
+Warrington	783	6	1
+West Berkshire	843	9	0
+Wokingham	421	0	4
+Bracknell Forest	94	0	1
+Royal Borough of Windsor and Maidenhead	316	8	2
+Slough	481	3	0
+Reading	467	0	1
+Surrey	152	6	4
+Blackburn with Darwen	464	0	4
+Swindon	637	9	4
+Bath and North East Somerset	165	0	2
+Wiltshire	970	5	0
+Calderdale	601	9	1
+Kirklees	821	2	4
+Nottingham	234	8	1
+Leicester	775	6	1
+Derby	891	1	0
+Leeds	537	0	1
+Bradford	611	0	4
+Wakefield	467	0	2
+Barnsley	264	9	0
+Salford	360	6	0
+Bolton	847	6	3
+Trafford	473	1	4
+Manchester	719	8	1
+Oldham	840	8	1
+Rochdale	92	4	2
+Tameside	270	1	1
+Bury	113	9	1
+Solihull	93	5	3
+Coventry	754	0	2
+Birmingham	901	9	1
+Sandwell	730	3	4
+Dudley	117	8	1
+Walsall	351	1	0
+Wolverhampton	776	4	1
