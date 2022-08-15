@@ -1,0 +1,142 @@
+/* part of resizing D3 svg: https://chartio.com/resources/tutorials/how-to-resize-an-svg-when-the-window-is-resized-in-d3-js/ */
+#transplants_plot {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 10%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.transplants-plot .svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.transplants-plot path.dataline {
+    fill: none;
+    stroke-width: 3;
+}
+
+.transplants-plot path.covidline {
+    fill: none;
+    stroke-width: 3;
+}
+
+.transplants-plot path.domain {
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+}
+
+.transplants-plot .axis path,
+.transplants-plot .axis line {
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    shape-rendering: crispEdges;
+}
+
+.transplants-plot .grid line {
+    stroke: #223;
+    stroke-width: 1;
+}
+
+.transplants-plot g#y-axis text {
+    fill: white;
+}
+.transplants-plot g#y-axis line {
+    stroke: #DDD;
+}
+.transplants-plot text#yaxis-label {
+    fill: #DDD;
+}
+.transplants-plot g#x-axis text {
+    fill: #DDD;
+    transform: rotate(45deg) translate(5px,0);
+    text-anchor: start;
+}
+.transplants-plot g#x-axis line {
+    stroke: #DDD;
+}
+.transplants-plot text#xaxis-label {
+    fill: #DDD;
+}
+
+.transplants-plot g#y-axis2 text {
+    fill: cyan;
+}
+.transplants-plot g#y-axis2 line {
+    stroke: cyan;
+}
+.transplants-plot text#yaxis2-label {
+    fill: cyan;
+}
+
+/* tooltip from: https://bl.ocks.org/d3noob/a22c42db65eb00d4e369 */
+div.transplant_plot_tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 5px;
+    font: 12px sans-serif;
+    font-weight: bold;
+    color: white;
+    background: black;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.transplants-bar-plot path.dataline {
+    fill: none;
+}
+
+.transplants-bar-plot path.domain {
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+}
+
+.transplants-bar-plot .axis path,
+.transplants-bar-plot .axis line {
+    fill: none;
+    stroke: slategray;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.transplants-bar-plot .grid line {
+    stroke: #DDD;
+    stroke-width: 1;
+}
+
+.transplants-bar-plot g#y-axis text {
+    fill: white;
+}
+.transplants-bar-plot g#y-axis line {
+    stroke: white;
+}
+.transplants-bar-plot text#yaxis-label {
+    fill: white;
+}
+.transplants-bar-plot g#x-axis text {
+    fill: white;
+}
+.transplants-bar-plot g#x-axis line {
+    stroke: white;
+}
+.transplants-bar-plot text#xaxis-label {
+    fill: white;
+}
+.transplants-bar-plot text.value-label {
+    fill:white;
+    font-size: 9px;
+}
+
+.transplants-bar-plot rect.y2019 {
+    fill: #3A70A6;
+}
+.transplants-bar-plot rect.y2020 {
+    fill: #CCE6FF;
+}

@@ -1,0 +1,68 @@
+/* from: http://doodlenerd.com/html-control/css-radio-button-generator */
+.control {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.control input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+.control_indicator {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 13px;
+    width: 13px;
+    background: #ffffff;
+    border: 1px solid #777777;
+    border-radius: undefinedpx;
+}
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+    background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+    background: #ffffff;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+    background: #0e6647d;
+}
+.control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.control input:checked ~ .control_indicator:after {
+    display: block;
+}
+.control-radio .control_indicator {
+    border-radius: 50%;
+}
+
+.control-radio .control_indicator:after {
+    left: 2px;
+    top: 2px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: #000000;
+    transition: background 250ms;
+}
+.control-radio input:disabled ~ .control_indicator:after {
+    background: #7b7b7b;
+}

@@ -1,0 +1,98 @@
+/* part of resizing D3 svg: https://chartio.com/resources/tutorials/how-to-resize-an-svg-when-the-window-is-resized-in-d3-js/ */
+#bubbles_graph {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 10%;
+    vertical-align: top;
+    overflow: hidden;
+}
+.bubbles-plot .svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bubbles-plot path.dataline {
+    fill: none;
+}
+
+.bubbles-plot path.domain {
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+}
+
+.bubbles-plot .axis path,
+.bubbles-plot .axis line {
+    fill: none;
+    stroke: #666;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.bubbles-plot g#y-axis text {
+    fill: white;
+}
+.bubbles-plot g#y-axis line {
+    stroke: white;
+}
+.bubbles-plot text#yaxis-label {
+    fill: white;
+}
+.bubbles-plot g#x-axis text {
+    fill: white;
+}
+.bubbles-plot g#x-axis line {
+    stroke: white;
+}
+.bubbles-plot text#xaxis-label {
+    fill: white;
+}
+
+.bubbles-plot g#y-axis2 text {
+    fill: cyan;
+}
+.bubbles-plot g#y-axis2 line {
+    stroke: cyan;
+}
+.bubbles-plot text#yaxis2-label {
+    fill: cyan;
+}
+
+.bubbles-plot line.curve {
+    stroke: gray;
+    stroke-width: 2px;
+}
+
+.bubbles-plot .grid line {
+    stroke: #223;
+    stroke-width: 1;
+}
+
+/* tooltip from: https://bl.ocks.org/d3noob/a22c42db65eb00d4e369 */
+div.bubbles-plot-tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 6px;
+    font: 14px sans-serif;
+    font-weight: bold;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    color: black;
+}
+
+/* Bubble-plot animate "play/stop" button - make it large font */
+#bubble_day_animate_btn {
+    font-size: 100%;
+    padding-top: 5;
+    padding-bottom: 5;
+}
+
+div.slider {
+    margin-left: 10px;
+    width: 100% !important;
+}

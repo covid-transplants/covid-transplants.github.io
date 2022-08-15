@@ -1,0 +1,567 @@
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB759XK5CF"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-KB759XK5CF');
+	</script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- https://github.com/seiyria/bootstrap-slider
+             https://seiyria.com/bootstrap-slider/#example-1 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/custom.css" id="css_main_file">
+        <link rel="stylesheet" type="text/css" href="/static/radio-button.css">
+
+        <!-- sophisticated select box with hierarchy features -->
+        <link rel="stylesheet" href="/static/hierarchy-select/dist/hierarchy-select.min.css">
+
+        
+<link rel="stylesheet" href="/static/transplants-plot.css">
+<link rel="stylesheet" href="/static/bubbles-plot.css">
+
+
+        <style>
+            
+a.dropdown-item.section {
+   color: white !important;
+   font-weight: bold;
+   margin-top: 10px !important;
+   border-bottom: 2px solid white;
+}
+
+        </style>
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-light">
+            <a class="navbar-brand"
+               href="/">
+                Organ transplantation during COVID-19
+            </a>
+
+            <button id="navbar_style1_menu_btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static/bootstrap-icons.svg#bar-chart-line"/>
+                            </svg>
+                            &nbsp;
+                            Graphs
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/heatmap.html">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static//bootstrap-icons.svg#globe2"/>
+                            </svg>
+                            &nbsp;
+                            Heatmaps
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/collaborators.html">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static//bootstrap-icons.svg#people-fill"/>
+                            </svg>
+                            &nbsp;
+                            Collaborators
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/media.html">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static/bootstrap-icons.svg#bookmarks-fill"/>
+                            </svg>
+                            &nbsp;
+                            Media
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/about.html">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static//bootstrap-icons.svg#info-circle"/>
+                            </svg>
+                            &nbsp;
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- A developer helper tool - showing which bootstrap screen width is active: xs/sm/md/lg/xl -->
+            <!-- https://getbootstrap.com/docs/4.0/utilities/display/#hiding-elements -->
+            <!--
+            <div>
+                <div class='d-block d-sm-none'>XS</div>
+                <div class='d-none d-sm-block d-md-none'>SM</div>
+                <div class='d-none d-md-block d-lg-none'>MD</div>
+                <div class='d-none d-lg-block d-xl-none'>LG</div>
+                <div class='d-none d-xl-block'>XL</div>
+            </div>
+            -->
+        </nav>
+
+        <div class="mt-3 container-fluid">
+            
+<div class="row justify-content-center">
+
+    <!-- This is the main content of the page, e.g. graph and text -->
+    <div class="col" id="first_col">
+
+        <!-- These are buttons to choose which graph is shown -->
+        <div class="w-25 float-right">
+            <ul class="nav nav-pills nav-justified" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active"
+                       id="transplants-tab"
+                       data-toggle="pill" href="#transplants">line graphs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " id="bubbles-tab"
+                       data-toggle="pill" href="#bubbles" role="tab" href="#">bubble charts</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tab-content nicebox" id="pills-tabContent">
+
+            <!-- Bubbles Graph -->
+            <div class="tab-pane fade
+                        "
+                 id="bubbles" role="tabpanel">
+                <div class="row">
+                    <div class="col">
+                        <h3>Transplant diminution v. deaths</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!-- Bubbles Graph Form Controls -->
+                    <div class="col-2 d-flex align-items-center">
+                        <div class="bubble-controls-container">
+
+                            <!-- organ selection -->
+                            <div class="form-group">
+                                ORGAN:
+                                <div class="">
+                                    <label class="control control-radio" for="bubble_organ_combined">
+                                        All
+                                        <input class="" type="radio" name="bubble_organ"
+                                               id="bubble_organ_combined" value="combined"
+                                               checked data-update='bubbles-plot'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="">
+                                    <label class="control control-radio" for="bubble_organ_kidney">
+                                        Kidney
+                                        <input class="" type="radio" name="bubble_organ"
+                                               id="bubble_organ_kidney" value="kidney"
+                                               data-update='bubbles-plot'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="">
+                                    <label class="control control-radio" for="bubble_organ_liver">
+                                        Liver
+                                        <input class="" type="radio" name="bubble_organ"
+                                           id="bubble_organ_liver" value="liver"
+                                           data-update='bubbles-plot'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="">
+                                    <label class="control control-radio" for="bubble_organ_lung">
+                                        Lung
+                                        <input class="" type="radio" name="bubble_organ"
+                                               id="bubble_organ_lung" value="lung"
+                                               data-update='bubbles-plot'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="">
+                                    <label class="control control-radio" for="bubble_organ_heart">
+                                        Heart
+                                        <input class="" type="radio" name="bubble_organ"
+                                               id="bubble_organ_heart" value="heart"
+                                               data-update='bubbles-plot'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Donor Type -->
+                            <div class="form-group">
+                                DONOR TYPE:
+                                <div class="">
+                                    <label class="control control-radio" for="bubble_donor_type_deceased">
+                                        Deceased
+                                        <input class="" type="radio" name="bubble_donor_type"
+                                               id="bubble_donor_type_deceased" value="deceased"
+                                               checked data-update='bubbles-plot-reload'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+				<div class="form-check">
+                                    <input class="form-check-input" type="radio" name="bubble_donor_type"
+					   id="bubble_donor_type_deceased_living" value="deceased-living"
+					   data-update='bubbles-plot-reload'>
+                                    <label class="form-check-label" for="bubble_donor_type_deceased_living">
+					Living &amp; Deceased
+                                    </label>
+				</div>
+                            </div>
+
+                            <!-- color by country/continent -->
+                            <div class="form-group">
+                                COLOR BY:
+                                <div class="">
+                                    <label class="control control-radio" for="bubble_color_by_country">
+                                        Country
+                                        <input class="" type="radio" name="bubble_color_by"
+                                               id="bubble_color_by_country" value="country"
+                                               checked data-update='bubbles-plot'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="">
+                                    <label class="control control-radio" for="bubble_color_by_continent">
+                                        Continent
+                                        <input class="" type="radio" name="bubble_color_by"
+                                               id="bubble_color_by_continent" value="continent"
+                                               data-update='bubbles-plot'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                            </div> <!-- /.col-auto for color-by-country/continent -->
+
+                        </div>
+
+                    </div> <!-- /.col-2 for controls -->
+
+
+                    <!-- The charts -->
+                    <div class="col-8">
+
+                        <div class="row">
+                            <div class="col-1">
+                            </div>
+                            <!-- Show-Day slider -->
+                            <div class="col-8">
+                                <label for="bubble_day">Show day:</label>
+                                <br/>
+                                <input type="range" class="form-control-range" id="bubble_day_range"
+                                       data-update='bubbles-plot'>
+                            </div>
+
+                            <div class="col-2">
+                                <button class="mt-3 btn btn-secondary btn"
+                                        id="bubble_day_animate_btn">
+                                    <svg class="bi" id="bubble_day_animation_play_btn" width="16" height="16" fill="white">
+                                        <use xlink:href="/static//bootstrap-icons.svg#play-fill"/>
+                                    </svg>
+                                    <svg class="bi d-none" id="bubble_day_animation_pause_btn" width="16" height="16" fill="white">
+                                        <use xlink:href="/static/bootstrap-icons.svg#pause-fill"/>
+                                    </svg>
+                                </button>
+                            </div> <!-- /.form-group for animate-show-day slider -->
+                            <div class="col-1">
+                            </div>
+                        </div>
+
+                        <div id="bubbles_graph"></div>
+                    </div>
+
+                    <div class="col-2">
+                        <table class="mt-5" id="bubbles_legend_table">
+                        </table>
+                    </div>
+
+                </div> <!-- /.row for bubbles plot and legend -->
+		<div class="col-8">
+		<p>Bubble size reflects the total deceased donor transplants in 2019</br> 
+		according to the <a href="http://www.transplant-observatory.org/"<>Global Observatory on Donation and Transplantation</a>.</p>
+		</div>
+            </div> <!-- /.tabpane for bubble-graph -->
+
+
+            <!-- Tabpane for Transplants-plot -->
+            <div class="tab-pane fade
+                        show active "
+                 id="transplants" role="tabpanel">
+
+                <!-- Transplants Plot -->
+                <div class="row">
+                    <div class="col">
+                        <h3>Transplant rates v. cases</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!-- Transplant Plot form Controls -->
+                    <div class="col-2 align-items-center d-flex">
+                        <div class="tx-controls-container">
+                            <div class="form-group">
+                                ORGAN:
+                                <div class="">
+                                    <label class="control control-radio" for="transplants_organ_combined">
+                                        All
+                                        <input class="" type="radio" name="transplants_organ"
+                                               id="transplants_organ_combined" value="combined"
+                                               checked data-update='transplants-plot'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="">
+                                    <label class="control control-radio" for="transplants_organ_kidney">
+                                        Kidney
+                                        <input class="" type="radio" name="transplants_organ"
+                                               id="transplants_organ_kidney" value="kidney"
+                                               data-update='transplants-plot'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="">
+                                    <label class="control control-radio" for="transplants_organ_liver">
+                                        Liver
+                                        <input class="" type="radio" name="transplants_organ"
+                                               id="transplants_organ_liver" value="liver"
+                                               data-update='transplants-plot'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="">
+                                    <label class="control control-radio" for="transplants_organ_lung">
+                                        Lung
+                                        <input class="" type="radio" name="transplants_organ"
+                                               id="transplants_organ_lung" value="lung"
+                                               data-update='transplants-plot'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="">
+                                    <label class="control control-radio" for="transplants_organ_heart">
+                                        Heart
+                                        <input class="" type="radio" name="transplants_organ"
+                                               id="transplants_organ_heart" value="heart"
+                                               data-update='transplants-plot'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Donor Type -->
+                            <div class="form-group">
+                                DONOR TYPE:
+                                <div class="">
+                                    <label class="control control-radio" for="transplants_donor_type_deceased">
+                                        Deceased
+                                        <input class="" type="radio" name="transplants_donor_type"
+                                               id="transplants_donor_type_deceased" value="deceased"
+                                               checked data-update='transplants-plot-reload'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="">
+                                    <label class="control control-radio" for="transplants_donor_type_deceased_living">
+                                        Living &amp; Deceased
+                                        <input class="" type="radio" name="transplants_donor_type"
+                                               id="transplants_donor_type_deceased_living" value="deceased-living"
+                                               data-update='transplants-plot-reload'>
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                            </div>
+
+
+
+                <div class="form-group tx-plot-region-dropdown">
+				<label class="" for="region">COUNTRY/REGION:</label>
+				<div class="dropdown hierarchy-select" id="transplants-region" >
+                                    <button type="button" class="btn btn-primary dropdown-toggle hs-test-btn"
+                                            id="transplants-region-button" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="transplants-region-button">
+					<div class="hs-menu-inner">
+                                            <a class="dropdown-item" data-value="all" data-level="1" href="#">All countries</a>
+                                            <a class="dropdown-item" data-value="global" data-level="1" data-default-selected="" href="#">Global</a>
+
+                                            <a class="dropdown-item disabled section" data-value="" data-level="1"
+                                               data-default-selected="" href="#">Asia:</a>
+                                            
+					                        <a class="dropdown-item" data-value="Kuwait" data-level="2" href="#">Kuwait</a>
+                                            <a class="dropdown-item" data-value="Malaysia" data-level="2" href="#">Malaysia</a>
+
+                                            <a class="dropdown-item disabled section" data-value="europe"
+                                               data-level="1" data-default-selected="" href="#">Europe:</a>
+                                            <a class="dropdown-item" data-value="Austria" data-level="2" href="#">Austria</a>
+                                            <a class="dropdown-item" data-value="Belgium" data-level="2" href="#">Belgium</a>
+                                            <a class="dropdown-item" data-value="Croatia" data-level="2" href="#">Croatia</a>
+                                            <a class="dropdown-item" data-value="Finland" data-level="2" href="#">Finland</a>
+                                            <a class="dropdown-item" data-value="France" data-level="2" href="#">France</a>
+                                            <a class="dropdown-item" data-value="Germany" data-level="2" href="#">Germany</a>
+                                            <a class="dropdown-item" data-value="Greece" data-level="2" href="#">Greece</a>
+                                            <a class="dropdown-item" data-value="Hungary" data-level="2" href="#">Hungary</a>
+					                        <a class="dropdown-item" data-value="Italy" data-level="2" href="#">Ireland</a>
+                                            <a class="dropdown-item" data-value="Ireland" data-level="2" href="#">Italy</a>
+                                            <a class="dropdown-item" data-value="Netherlands" data-level="2" href="#">Netherlands</a>
+                                            <a class="dropdown-item" data-value="Norway" data-level="2" href="#">Norway</a>
+                                            <a class="dropdown-item" data-value="Portugal" data-level="2" href="#">Portugal</a>
+                                            <a class="dropdown-item" data-value="Slovenia" data-level="2" href="#">Slovenia</a>
+                                            <a class="dropdown-item" data-value="Spain" data-level="2" href="#">Spain</a>
+                                            <a class="dropdown-item" data-value="Switzerland" data-level="2" href="#">Switzerland</a>
+					                        <a class="dropdown-item" data-value="United Kingdom" data-level="2" href="#">United Kingdom</a>
+
+                                            <a class="dropdown-item disabled section" data-value="northamerica" data-level="1"
+                                               data-default-selected="" href="#">North America:</a>
+		                                    <a class="dropdown-item" data-value="Canada" data-level="2" href="#">Canada</a>
+                                            <a class="dropdown-item" data-value="US" data-level="2" href="#">United States</a>
+					                        <a class="dropdown-item" data-value="Midwest" data-level="3" href="#">Midwest</a>
+                                            <a class="dropdown-item" data-value="Northeast" data-level="3" href="#">Northeast</a>
+                                            <a class="dropdown-item" data-value="Puerto Rico" data-level="3" href="#">Puerto Rico</a>
+                                            <a class="dropdown-item" data-value="South" data-level="3" href="#">South</a>
+                                            <a class="dropdown-item" data-value="West" data-level="3" href="#">West</a>
+
+                                            <a class="dropdown-item disabled section" data-value="southamerica" data-level="1"
+                                               data-default-selected="" href="#">South America:</a>
+                                            <a class="dropdown-item" data-value="Argentina" data-level="2" href="#">Argentina</a>
+                                            <a class="dropdown-item" data-value="Brazil" data-level="2" href="#">Brazil</a>
+                                            <a class="dropdown-item" data-value="Chile" data-level="2" href="#">Chile</a>
+					                        <a class="dropdown-item" data-value="Paraguay" data-level="2" href="#">Paraguay</a>
+					</div>
+                                    </div>
+                                    <input class="d-none" name="transplants-region" readonly="readonly" aria-hidden="true" type="text" data-update="transplants-plot" />
+
+				</div>
+                            </div>
+
+                            <div class="form-group">
+				<label class="" for="period" id="period-label">PERIOD:</label>
+				<select class="form-control update-chart-control" id="period" data-update="transplants-plot">
+                                    <option class="require_2019_data" selected value="both">2019 and 2020</option>
+                                    <option class="require_2019_data" value="ratio">2020 vs. 2019 (linear)</option>
+                                    <option class="require_2019_data" value="ratio_log">2020 vs. 2019 (log)</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2020">2020</option>
+				</select>
+                            </div>
+			</div>
+                    </div> <!-- /.col-2 for for plot form controls -->
+
+                    <div class="col-8">
+                        <div id="transplants_plot"></div>
+			<br/>
+			<div id="all_zero_warning" class="d-none">
+			    Periodic transplant data was not available
+	                    <br/>
+                	    for the selected organ/region.
+			</div>
+                    </div>
+                    <div class="col-2">
+                        <div class="mt-5 transplant_legend_container">
+                            <table id="transplants_legend">
+                            </table>
+                        </div>
+                        <br/>
+                        <div id="transplants_bar_plot"></div>
+                    </div>
+			<div class="col-8">
+ 			<p>LOESS smoothed 14-day moving average from the first 100 cases to the end of follow-up.</p>
+			</div>
+                </div> <!-- /.row for transplant plot SVG and legend -->
+            </div> <!-- /.tabpane -->
+        </div> <!-- /.tabcontent -->
+    </div> <!-- /.col -->
+</div> <!-- /.row -->
+
+
+        </div> <!-- /.container-fluid -->
+
+        <!-- Footer -->
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                        <p class="text-muted medium mb-4 mb-lg-0">
+                            &copy; 2020
+                            Paris Transplant Group
+                        </p>
+                    </div>
+                    <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item mr-3">
+                                <a href="https://twitter.com/ParisTxGroup">
+                                    <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+	
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+                integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+                crossorigin="anonymous"></script>
+
+        <!-- https://github.com/seiyria/bootstrap-slider
+             https://seiyria.com/bootstrap-slider/#example-1 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js"></script>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+
+        <script src="/static/hierarchy-select/dist/hierarchy-select.min.js"></script>
+
+        
+<script src="/static/transplants-plot.js"></script>
+
+<script src="/static/bubbles-plot.js"></script>
+
+<script>
+ $(function(){
+     $('#transplants-region').hierarchySelect({
+         width: '100%',
+         onChange: function (value) {
+             //pass the onChange to the hidden <input>, which is connected to the 'transplants-plot.js'
+             $('input[name="transplants-region"]').trigger('change');
+         }
+     });
+ });
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB759XK5CF"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-KB759XK5CF');
+	</script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- https://github.com/seiyria/bootstrap-slider
+             https://seiyria.com/bootstrap-slider/#example-1 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/custom.css" id="css_main_file">
+        <link rel="stylesheet" type="text/css" href="/static/radio-button.css">
+
+        <!-- sophisticated select box with hierarchy features -->
+        <link rel="stylesheet" href="/static/hierarchy-select/dist/hierarchy-select.min.css">
+
+        
+<style>
+ #chartdiv {
+     width: 100%;
+     height: 600px;
+ }
+</style>
+
+
+        <style>
+            
+            
+        </style>
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-light">
+            <a class="navbar-brand"
+               href="/">
+                Organ transplantation during COVID-19
+            </a>
+
+            <button id="navbar_style1_menu_btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static/bootstrap-icons.svg#bar-chart-line"/>
+                            </svg>
+                            &nbsp;
+                            Graphs
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/heatmap.html">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static//bootstrap-icons.svg#globe2"/>
+                            </svg>
+                            &nbsp;
+                            Heatmaps
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/collaborators.html">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static//bootstrap-icons.svg#people-fill"/>
+                            </svg>
+                            &nbsp;
+                            Collaborators
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/media.html">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static/bootstrap-icons.svg#bookmarks-fill"/>
+                            </svg>
+                            &nbsp;
+                            Media
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/about.html">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static//bootstrap-icons.svg#info-circle"/>
+                            </svg>
+                            &nbsp;
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- A developer helper tool - showing which bootstrap screen width is active: xs/sm/md/lg/xl -->
+            <!-- https://getbootstrap.com/docs/4.0/utilities/display/#hiding-elements -->
+            <!--
+            <div>
+                <div class='d-block d-sm-none'>XS</div>
+                <div class='d-none d-sm-block d-md-none'>SM</div>
+                <div class='d-none d-md-block d-lg-none'>MD</div>
+                <div class='d-none d-lg-block d-xl-none'>LG</div>
+                <div class='d-none d-xl-block'>XL</div>
+            </div>
+            -->
+        </nav>
+
+        <div class="mt-3 container-fluid">
+            
+<div class="row justify-content-center">
+    <div class="col-10">
+
+        <h3>Contributing countries</h3>
+
+        <p>
+        </p>
+
+        <!-- HTML -->
+        <div id="chartdiv"></div>
+        <!-- end world map -->
+
+    </div>
+</div>
+
+
+        </div> <!-- /.container-fluid -->
+
+        <!-- Footer -->
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                        <p class="text-muted medium mb-4 mb-lg-0">
+                            &copy; 2020
+                            Paris Transplant Group
+                        </p>
+                    </div>
+                    <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item mr-3">
+                                <a href="https://twitter.com/ParisTxGroup">
+                                    <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+	
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+                integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+                crossorigin="anonymous"></script>
+
+        <!-- https://github.com/seiyria/bootstrap-slider
+             https://seiyria.com/bootstrap-slider/#example-1 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js"></script>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+
+        <script src="/static/hierarchy-select/dist/hierarchy-select.min.js"></script>
+
+        
+<!-- Resources -->
+<script src="/static/maps/core.js"></script>
+<script src="/static/maps/maps.js"></script>
+<script src="/static/maps/worldHigh.js"></script>
+<script src="/static/maps/dataviz.js"></script>
+
+<!-- Chart code -->
+<script>
+ am4core.ready(function() {
+
+     // Themes begin
+     am4core.useTheme(am4themes_dataviz);
+     // Themes end
+
+     // Create map instance
+     var chart = am4core.create("chartdiv", am4maps.MapChart);
+
+     // Set map definition
+     chart.geodata = am4geodata_worldHigh;
+
+     // Set projection
+     chart.projection = new am4maps.projections.Mercator();
+
+     // Export
+     chart.exporting.menu = new am4core.ExportMenu();
+
+     // Zoom control
+     chart.zoomControl = new am4maps.ZoomControl();
+
+     var homeButton = new am4core.Button();
+     homeButton.events.on("hit", function() {
+         chart.goHome();
+
+     });
+
+     // Center on the groups by default
+     //chart.homeZoomLevel = 3;
+     //chart.homeGeoPoint = { longitude: 48.8566, latitude: 2.3522 };
+
+     // ids are in worldHigh.js or ISO codes
+     var groupData = [
+         {
+             "name": "Collaborators",
+             "color": chart.colors.getIndex(0),
+             "data": [
+                 {
+                     "title": "Argentina\nInstituto Nacional Central Único Coordinador de Ablación e Implante",
+                     "id": "AR"
+                 }, {
+                 }, {
+                     "title": "Austria\nEurotransplant",
+                     "id": "AT"
+                 }, {
+                     "title": "Belgium\nEurotransplant",
+                     "id": "BE"
+                 }, {
+                     "title": "Brazil\nBrazilian Organ Transplant Association",
+                     "id": "BR"
+                 }, {
+                     "title": "Canada\nCanadian Blood Services OTDT",
+                     "id": "CA"
+                 }, {
+                     "title": "Chile\nCorporación Nacional de Trasplantes de Chile",
+                     "id": "CL"
+                 }, {
+                     "title": "Croatia\nDonor Network of Croatia/Eurotransplant",
+                     "id": "HR"
+                 }, {
+                     "title": "Finland\nHelsinki University Hospital (HUS)",
+                     "id": "FI"
+                 }, {
+                     "title": "France\nAgence de la Biomédecine",
+                     "id": "FR"
+                 }, {
+                     "title": "Germany\nDeutsche Stiftung Organtransplantation",
+                     "id": "DE"
+                 }, {
+                     "title": "Great Britain\nUnited Kingdom National Health Service",
+                     "id": "GB"
+                 }, {
+                     "title": "Greece\nHellenic Transplant Organization",
+                     "id": "GR"
+                 }, {
+                     "title": "Hungary\nEurotransplant",
+                     "id": "HU"
+                 }, {
+                     "title": "Ireland\nEurotransplant",
+                     "id": "IE"
+                 }, {
+                     "title": "Italy\nCentro Nazionale per i Trapianti",
+                     "id": "IT"
+                 }, {
+                     "title": "Kuwait\nAsian Society of Transplantation",
+                     "id": "KW"
+                 }, {
+                     "title": "Japan\nJapanese Organ Transplant Network (JOTN)",
+                     "id": "JP"
+                 }, {
+                     "title": "Malaysia\nAsian Society of Transplantation",
+                     "id": "MY"
+                 }, {
+                     "title": "Myanmar\nAsian Society of Transplantation",
+                     "id": "MM"
+                 }, {
+                     "title": "Netherlands\nNederlandse Transplantatie Vereniging/Eurotransplant",
+                     "id": "NL"
+                 }, {
+                     "title": "Norway\nInternational Registry on Organ Donation/Scandiatransplant",
+                     "id": "NO"
+                 }, {
+                     "title": "Paraguay\nParaguayan Society of Transplants (SPT)",
+                     "id": "PY"
+                 }, {
+                     "title": "Philippines\nNational Kidney and transplant Institute",
+                     "id": "PH"
+                 }, {
+                     "title": "Portugal\nInstituto português de sangue e da transplantação",
+                     "id": "PT"
+                 }, {
+                     "title": "Singapore\nAsian Society of Transplantation",
+                     "id": "SG"
+                 }, {
+                     "title": "Slovenia\nEurotransplant",
+                     "id": "SI"
+                 }, {
+                     "title": "Spain\nOrganización Nacional de Trasplantes",
+                     "id": "ES"
+                 }, {
+                     "title": "Sweden\nScandiatransplant",
+                     "id": "SE"
+                 }, {
+                     "title": "Switzerland\nSwisstransplant",
+                     "id": "CH"
+                 }, {
+                     "title": "United States\nUnited Network for Organ Sharing",
+                     "id": "US"
+                 }
+             ]
+         }
+     ];
+
+     // This array will be populated with country IDs to exclude from the world series
+     var excludedCountries = ["AQ"];
+
+     // Create a series for each group, and populate the above array
+     groupData.forEach(function(group) {
+         var series = chart.series.push(new am4maps.MapPolygonSeries());
+         series.name = group.name;
+         series.useGeodata = true;
+         var includedCountries = [];
+         group.data.forEach(function(country) {
+             includedCountries.push(country.id);
+             excludedCountries.push(country.id);
+         });
+         series.include = includedCountries;
+
+         series.fill = am4core.color(group.color);
+
+         // By creating a hover state and setting setStateOnChildren to true, when we
+         // hover over the series itself, it will trigger the hover SpriteState of all
+         // its countries (provided those countries have a hover SpriteState, too!).
+         series.setStateOnChildren = true;
+         series.calculateVisualCenter = true;
+
+         // Country shape properties & behaviors
+         var mapPolygonTemplate = series.mapPolygons.template;
+         // Instead of our custom title, we could also use {name} which comes from geodata  
+         mapPolygonTemplate.fill = am4core.color(group.color);
+         mapPolygonTemplate.fillOpacity = 0.8;
+         mapPolygonTemplate.nonScalingStroke = true;
+         mapPolygonTemplate.tooltipPosition = "fixed"
+
+         mapPolygonTemplate.events.on("over", function(event) {
+             series.mapPolygons.each(function(mapPolygon) {
+                 mapPolygon.isHover = true;
+             })
+             event.target.isHover = false;
+             event.target.isHover = true;
+         })
+
+         mapPolygonTemplate.events.on("out", function(event) {
+             series.mapPolygons.each(function(mapPolygon) {
+                 mapPolygon.isHover = false;
+             })
+         })
+
+         // States
+         var hoverState = mapPolygonTemplate.states.create("hover");
+         hoverState.properties.fill = am4core.color("#0d98ba");
+
+         // Tooltip
+         mapPolygonTemplate.tooltipText = "{title}"; // enables tooltip
+         // series.tooltip.getFillFromObject = false; // prevents default colorization; ie. display diff color on hover
+         // series.tooltip.background.fill = am4core.color(group.color);
+
+         // MapPolygonSeries will mutate the data assigned to it, 
+         // we make and provide a copy of the original data array to leave it untouched.
+         // (This method of copying works only for simple objects, e.g. it will not work
+         //  as predictably for deep copying custom Classes.)
+         series.data = JSON.parse(JSON.stringify(group.data));
+     });
+
+     // The rest of the world.
+     var worldSeries = chart.series.push(new am4maps.MapPolygonSeries());
+     var worldSeriesName = "world";
+     worldSeries.name = worldSeriesName;
+     worldSeries.useGeodata = true;
+     worldSeries.exclude = excludedCountries;
+     worldSeries.fillOpacity = 0.8;
+     worldSeries.hiddenInLegend = true;
+     worldSeries.mapPolygons.template.nonScalingStroke = true;
+
+ }); // end am4core.ready()
+</script>
+
+
+    </body>
+</html>

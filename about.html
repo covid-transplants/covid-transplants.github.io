@@ -1,0 +1,444 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KB759XK5CF"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-KB759XK5CF');
+	</script>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+        <!-- https://github.com/seiyria/bootstrap-slider
+             https://seiyria.com/bootstrap-slider/#example-1 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/css/bootstrap-slider.min.css">
+
+        <link rel="stylesheet" type="text/css" href="/static/custom.css" id="css_main_file">
+        <link rel="stylesheet" type="text/css" href="/static/radio-button.css">
+
+        <!-- sophisticated select box with hierarchy features -->
+        <link rel="stylesheet" href="/static/hierarchy-select/dist/hierarchy-select.min.css">
+
+        
+<style>
+ div.card-header {
+     color: white;
+     background-color: #515169;
+     border: none;
+ }
+ div.card {
+     border: 1px solid #444;
+ }
+ div.card-header button {
+     color: white;
+     background-color: #515169;
+ }
+ div.card-header button:hover {
+     color: white;
+     background-color: #515169;
+ }
+ div.card-body {
+     background: #1E1E2E;
+ }
+
+ /* Table content color */
+ table.table-my-dark {
+     color: white;
+     background-color: #27293D;
+ }
+
+ /* Table Header color */
+ table.table-my-dark thead {
+     background-color: #202030;
+ }
+</style>
+
+
+        <style>
+            
+            
+        </style>
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-light">
+            <a class="navbar-brand"
+               href="/">
+                Organ transplantation during COVID-19
+            </a>
+
+            <button id="navbar_style1_menu_btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static/bootstrap-icons.svg#bar-chart-line"/>
+                            </svg>
+                            &nbsp;
+                            Graphs
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/heatmap.html">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static//bootstrap-icons.svg#globe2"/>
+                            </svg>
+                            &nbsp;
+                            Heatmaps
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/collaborators.html">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static//bootstrap-icons.svg#people-fill"/>
+                            </svg>
+                            &nbsp;
+                            Collaborators
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/media.html">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static/bootstrap-icons.svg#bookmarks-fill"/>
+                            </svg>
+                            &nbsp;
+                            Media
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/about.html">
+                            <svg class="bi" width="22" height="22" fill="currentColor">
+                                <use xlink:href="/static//bootstrap-icons.svg#info-circle"/>
+                            </svg>
+                            &nbsp;
+                            About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- A developer helper tool - showing which bootstrap screen width is active: xs/sm/md/lg/xl -->
+            <!-- https://getbootstrap.com/docs/4.0/utilities/display/#hiding-elements -->
+            <!--
+            <div>
+                <div class='d-block d-sm-none'>XS</div>
+                <div class='d-none d-sm-block d-md-none'>SM</div>
+                <div class='d-none d-md-block d-lg-none'>MD</div>
+                <div class='d-none d-lg-block d-xl-none'>LG</div>
+                <div class='d-none d-xl-block'>XL</div>
+            </div>
+            -->
+        </nav>
+
+        <div class="mt-3 container-fluid">
+            
+<div class="row">
+
+    <div class="col-10 offset-1">
+
+        <div class="accordion" id="accordionExample">
+
+            
+            <div class="card">
+
+                
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Motivation
+                        </button>
+                    </h2>
+                </div>
+
+                
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p style="font-size:120%">
+                            Consequences of the COVID-19 Pandemic on
+                            Worldwide Organ Procurement and Transplantation
+                        </p>
+			<p>The COVID-19 pandemic has created an unprecedented burden on healthcare systems worldwide. For many healthcare domains in different nations, there are currently no structured data registries, making the pandemic-related impact difficult to capture.</p> 
+			<p>Organ transplantation is well-regulated, with a specific nationwide day-to-day reporting scheme, offering a unique opportunity to illustrate the impact of the pandemic on healthcare systems. Reductions in the number of transplants compared to the previous year can reveal the consequences as countries adjusted to the pandemic.</p>
+			<p>Transplant data from centers around the world were compiled to assess the impact of the COVID-19 pandemic on organ donation and transplantation and consequences for waitlisted patients. Data were collected from the beginning of the COVID-19 outbreak on January 1st 2020 up until January 1st 2021, along with data from the same period in 2019.</p>
+			<p>
+			<a href="https://clinicaltrials.gov/ct2/show/NCT04416256" target="_blank">clinicaltrials.gov: NCT04416256</a>
+			</p>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="card">
+
+                
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Data sources
+                        </button>
+                    </h2>
+                </div>
+
+                
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+
+                        <table class="table table-my-dark">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Country</th>
+                                    <th scope="col">Data source</th>
+                                    <th scope="col">Date of 100th COVID-19 case</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Argentina</td>
+                                    <td>Instituto Nacional Central Único Coordinador de Ablación e Implante</td>
+                                    <td>March 20 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Austria</td>
+                                    <td>Eurotransplant</td>
+                                    <td>March 8 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Belgium</td>
+                                    <td>Eurotransplant</td>
+                                    <td>March 6 2020</td>
+                                </tr>
+				<tr>
+                                    <td>Brazil</td>
+                                    <td>Brazilian Organ Transplant Association</td>
+                                    <td>March 13 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Canada</td>
+                                    <td>Organ & Tissue Donation and Transplantation</td>
+                                    <td>March 11 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Chile</td>
+                                    <td>Corporación Nacional de Trasplantes de Chile</td>
+                                    <td>March 15 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Croatia</td>
+                                    <td>Donor Network of Croatia Eurotransplant</td>
+                                    <td>March 19 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Finland</td>
+                                    <td>Helsinki University Hospital</td>
+                                    <td>March 13 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>France</td>
+                                    <td>Agence de la Biomédecine</td>
+                                    <td>February 29 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Germany</td>
+                                    <td>Deutsche stiftung organ transplantation/Eurotransplant</td>
+                                    <td>March 1 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Greece</td>
+                                    <td>Hellenic National Transplant Organization</td>
+                                    <td>March 13 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Hungary</td>
+                                    <td>Eurotransplant</td>
+                                    <td>March 21 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Ireland</td>
+                                    <td>Eurotransplant</td>
+                                    <td>March 14 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Italy</td>
+                                    <td>Centro Nazionale per i Trapianti</td>
+                                    <td>February 23 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Japan</td>
+                                    <td>Japanese Organt Transplant Network</td>
+                                    <td>February 21 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Kuwait</td>
+                                    <td>Asian Society of Transplantation</td>
+                                    <td>March 14 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Malaysia</td>
+                                    <td>Asian Society of Transplantation</td>
+                                    <td>March 9 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Myanmar</td>
+                                    <td>Asian Society of Transplantation</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>Netherlands</td>
+                                    <td>Eurotransplant</td>
+                                    <td>March 6 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Norway</td>
+                                    <td>Scandiatransplant</td>
+                                    <td>March 6 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Paraguay</td>
+                                    <td>Paraguayan Society of Transplants</td>
+                                    <td>April 5 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Portugal</td>
+                                    <td>Instituto português de sangue e da transplantação</td>
+                                    <td>March 13 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Slovenia</td>
+                                    <td>Eurotransplant</td>
+                                    <td>March 13 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Spain</td>
+                                    <td>Organización Nacional de Trasplantes</td>
+                                    <td>March 2 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>Sweden</td>
+                                    <td>Scandiatransplant</td>
+                                    <td>NA</td>
+                                </tr>
+                                <tr>
+                                    <td>Switzerland</td>
+                                    <td>Swiss National Foundation for Organ Donation and Transplantation</td>
+                                    <td>March 5 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>United Kingdom</td>
+                                    <td>National Health Service</td>
+                                    <td>March 2 2020</td>
+                                </tr>
+                                <tr>
+                                    <td>United States</td>
+                                    <td>United Network for Organ Sharing/Organ Procurement and Transplantation Network</td>
+                                    <td>March 4 2020</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="card">
+
+
+                
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Data preparation
+                        </button>
+                    </h2>
+                </div>
+                
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+			<p style="font-size:100%">Transplant totals include solid organs: kidney, liver, lung, and heart. Dual transplants are counted for each separate organ.</p>
+
+			<h4>Line graphs:</h4>
+			<p>COVID-19 cases and total transplants over time (2019, 2020, or ratio of 2020/2019), starting from the date of the 100th recorded COVID-19 case for each country until the end of the follow-up date. All transplant data were smoothed in two steps: first, by calculating a 14-day moving average; second, by applying locally estimated scatterplot smoothing (LOESS) to the moving average.</p>
+
+			<h4>Bubble charts (3D scatter plots):</h4>
+			<p>x-axis: COVID-19 deaths per million inhabitants calculated from data retrieved from the Johns Hopkins University COVID-19 Data Repository and the World Bank.</p>
+			<p>y-axis: percent diminution of transplant rate in 2020 compared to the same period of time in 2019.</p>
+			<p>Bubble size reflects the number of deceased donor transplants in 2019 according to the Global Observatory on Donation and Transplantation (GODT).</p>
+
+			<h4>Geographic heatmaps (choropleth maps):</h4>
+			<p>Transplant totals in 2019 and 2020 and total COVID-19 cases by region for each country with available data.</p>
+			<p>Transplant totals are from the date of the 100th confirmed COVID-19 case through the end of April 2020 and the same period of time in 2019.</p>
+			<p>Heatmap gradients for COVID-19 cases and transplants in 2019 and 2020 were determined using the Jenks natural breaks classification method.</p>
+		   </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- /.col -->
+
+</div> <!-- /.row - of the main container -->
+
+        </div> <!-- /.container-fluid -->
+
+        <!-- Footer -->
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                        <p class="text-muted medium mb-4 mb-lg-0">
+                            &copy; 2020
+                            Paris Transplant Group
+                        </p>
+                    </div>
+                    <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item mr-3">
+                                <a href="https://twitter.com/ParisTxGroup">
+                                    <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+	
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+                integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+                crossorigin="anonymous"></script>
+
+        <!-- https://github.com/seiyria/bootstrap-slider
+             https://seiyria.com/bootstrap-slider/#example-1 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js"></script>
+
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+
+        <script src="/static/hierarchy-select/dist/hierarchy-select.min.js"></script>
+
+        
+        
+    </body>
+</html>

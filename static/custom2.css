@@ -1,0 +1,138 @@
+body {
+    font: 15px Arial;
+    color: #ccc;
+
+    /*
+    background-color: #1E1E2E;
+   */
+    background-color: #2A2B30;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1, h2, h3, h4 {
+    color: white;
+}
+
+#first_col {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.nicebox {
+    /*
+    border-radius: 10px;
+    background-color: #27293D;
+    padding: 1em;
+    margin-bottom: 1em;
+   */
+
+    background-color: #1C1D22;
+    padding: 15px;
+    margin-bottom: 1em;
+}
+
+
+.nav-item, .nav-item:hover {
+    color: white;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #515169;
+}
+
+.navbar {
+    /*background-color: black !important;*/
+    /*    background-image: linear-gradient(0deg, #1e1e2e 12px, rgb(0, 0, 0) 100%);*/
+    background-color: #1C1D22 !important;
+}
+
+
+
+.sidebar {
+    /*
+position: fixed;
+    height: 1000px;
+    width: 250px;
+*/
+    background-image: linear-gradient(180deg, #3b3b54 0px, #1e1e2e 100%);
+    /*    padding: 20px;*/
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+}
+
+.sidebar svg {
+    margin-right: 10px;
+}
+
+table.sidebar-table {
+    /*    font-size: 120%;*/
+    width: 100%;
+}
+
+table.sidebar-table td {
+    padding-bottom: 10px;
+    vertical-align: middle;
+    text-align: justify;
+}
+
+#regional-maps {
+  height: 500px; 
+  min-width: 310px; 
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+
+.center-text {
+    font-size: 110%;
+    text-align: justify;
+    margin: 5px;
+    padding-right: 500px;
+}
+
+
+#period {
+    background-color: rgb(81, 81, 105);
+    border: 1px solid black;
+    color: white;
+}
+
+
+#transplants-region-button {
+    background-color: rgb(81, 81, 105);
+    border: 1px solid black;
+    color: white;
+}
+/*.hierarchy-select.dropdown {
+    background-color: rgb(81, 81, 105);
+    border: 1px solid black;
+    color: white;
+}*/
+
+.hs-searchbox {
+    background-color: rgb(81, 81, 105);
+    border: 1px solid black;
+    color: white;
+}
+
+.hierarchy-select.dropdown .dropdown-menu
+{
+    background-color: rgb(81, 81, 105);
+    border: 1px solid black;
+    color: white;
+}
+
+.hierarchy-select.dropdown .dropdown-menu a
+{
+    color: white;
+}
+
+.hierarchy-select.dropdown .dropdown-menu a:hover
+{
+    color: black;
+}
